@@ -4,13 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 0,
+      staleTime: 500000,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
+  <QueryClientProvider client={queryClient}>
+    <React.StrictMode>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </React.StrictMode>
+  </QueryClientProvider>,
   document.getElementById('root')
 );
 
