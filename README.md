@@ -14,7 +14,7 @@ Front end app for url shortener implemented in reactJs
 - install or update npm package manager `npm install -g npm`
 - clone this repository `git clone https://github.com/nevooronni/URL_SHORTENER_FRON_END.git`
 - Go to master branch `git checkout master`
-- Create file called .env put the baseUrl for API endpoint in `REACT_APP_BASE_URL_API_ENDPOINT=http://localhost:5050`
+- Create file called .env at root of directory & put the baseUrl for the API endpoint in `REACT_APP_BASE_URL_API_ENDPOINT=http://localhost:5050`
 - install dependencies from package.json `npm install`
 - start application `npm start`
 
