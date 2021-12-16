@@ -5,6 +5,7 @@ import {
   Text,
   Button,
   Input,
+  Image,
   FormControl,
   FormErrorIcon,
   FormErrorMessage,
@@ -12,6 +13,8 @@ import {
 } from '@chakra-ui/react'
 import { useForm, Controller } from 'react-hook-form';
 import { useCreateShortUrlQuery, useAllUrls } from './Data';
+import urlBackgroundimage from '../assets/url_shortener.png';
+import urlImage from '../assets/cropped_link_image.jpeg';
 
 const UrlCard = ({ longUrl, shortUrl }) => {
   const toast = createStandaloneToast();
@@ -108,11 +111,23 @@ function UrlShortener() {
   return (
     <VStack w='full'>
       <HStack w='full' justify='center' p={10} background='white'>
+        <Image
+          src={urlImage}
+          width='70px'
+          height='70px'
+          borderRadius='50px'
+        />
         <Text fontSize='24px' color='#2281c2' fontWeight='bold'>
           URL SHORTENER
         </Text>
       </HStack>
-      <HStack w='full' background='#2c96df' px={10} py={16}>
+      <HStack
+        w='full'
+        // background='#2c96df'
+        px={10}
+        py={16}
+        backgroundImage={`url(${urlBackgroundimage}), linear-gradient(85deg,#2c96df -1%,#2c96df 0,#8355e1)`}
+      >
         <form style={{ width: '100%' }} onSubmit={handleSubmit(submit)}>
           <HStack w='100%' justify='center'>
             <FormControl
@@ -143,8 +158,8 @@ function UrlShortener() {
               type='submit'
               w='200px'
               border='1px solid white'
-              background='transparent'
-              color='white'
+              background={createShortUrl?.isLoading ? 'white' : '#2c96df'}
+              color={createShortUrl?.isLoading ? '#2c96df' : 'white'}
               _hover={{
                 background: 'white',
                 color: '#2c96df'
