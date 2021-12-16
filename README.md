@@ -8,6 +8,13 @@ Front end app for url shortener implemented in reactJs
 - List short url
 - copy short url to clipboard
 
+#### Technologies Ussed
+
+- ReactJs library
+- React Query hooks for fetching, caching & updating data
+- CHakra UI
+- Axios for fetching data
+
 #### How should this be manually tested?
 
 - install nodejs from here [official Node.js website](https://nodejs.org/en/)
