@@ -8,7 +8,7 @@ Front end app for url shortener implemented in reactJs
 - List short url
 - copy short url to clipboard
 
-#### Technologies Ussed
+#### Technologies Used
 
 - ReactJs library
 - React Query hooks for fetching, caching & updating data
