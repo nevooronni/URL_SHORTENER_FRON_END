@@ -10,10 +10,10 @@ Front end app for url shortener implemented in reactJs
 
 #### How should this be manually tested?
 
-- clone this repository `git clone https://github.com/nevooronni/URL_SHORTENER_FRON_END.git`
-- Go to master branch `git checkout master`
 - install nodejs from here [official Node.js website](https://nodejs.org/en/)
 - install or update npm package manager `npm install -g npm`
+- clone this repository `git clone https://github.com/nevooronni/URL_SHORTENER_FRON_END.git`
+- Go to master branch `git checkout master`
 - install dependencies from package.json `npm install`
 - start application `npm start`
 
